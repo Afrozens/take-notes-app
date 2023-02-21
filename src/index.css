@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+@layer components {
+    .btn-block {
+        @apply bg-[#ADC178] border-[#ADC178] focus:bg-[#ADC178] focus:border-[#ADC178] text-black
+    }
+
+    .btn-sm {
+        @apply bg-transparent border-transparent text-black focus:bg-[#ADC178] focus:border-[#ADC178] focus:text-white hover:text-white hover:bg-[#DDE5B6] hover:border-[#DDE5B6] p-1 md:p-2 md:mr-4
+    }
+
+    .btn-checked {
+        @apply btn btn-sm bg-[#ADC178] border-[#ADC178] text-white p-1 md:p-2 md:mr-4
+    }
+}
