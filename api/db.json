@@ -25,16 +25,17 @@
       "id": "71f67987-450a-4e72-a953-24fb018be046"
     },
     {
-      "title": "Canserbero",
-      "description": "Ser del SER",
-      "category": "Personal",
-      "id": "7f50acce-72e6-4eba-80ba-2032cfcc0e10"
-    },
-    {
       "title": "Dominican Gang Star",
       "description": "Yes, this is best rap.",
       "category": "Project",
       "id": "1a886328-32d0-4153-baa2-a00da4c4bde9"
+    }
+  ],
+  "tasks": [
+    {
+      "task": "Ir al gym",
+      "isCompleted": true,
+      "id": "629955da-cd50-4793-8266-a8d2ab27d76c"
     }
   ]
 }

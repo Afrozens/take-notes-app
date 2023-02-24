@@ -3,7 +3,7 @@ import IconMenu from "../assets/IconMenu.svg";
 import IconHome from "../assets/IconHome.svg";
 import IconAdd from "../assets/IconAdd.svg";
 import IconTask from "../assets/IconTask.svg";
-import SearchFilter from "./SearchFilter";
+import IconNotification from "../assets/IconNotification.svg";
 
 const Layout = () => {
   return (
@@ -39,9 +39,18 @@ const Layout = () => {
             </div>
           </div>
           <div className="navbar-center">
-            <h1 className="font-bold normal-case text-xl underline decoration-[#ADC178]">TakeNotes APP</h1>
+            <h1 className="font-bold normal-case text-xl underline decoration-[#ADC178]">
+              TakeNotes APP
+            </h1>
           </div>
-          <SearchFilter />
+          <div className="indicator navbar-end ">
+          <span className="indicator-item badge badge-info">4</span>
+            <img
+              src={IconNotification}
+              alt="notification icon"
+              className="w-8 h-8 cursor-pointer"
+            />
+          </div>
         </div>
       </header>
 

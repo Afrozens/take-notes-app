@@ -13,4 +13,16 @@
     .btn-checked {
         @apply btn btn-sm bg-[#ADC178] border-[#ADC178] text-white p-1 md:p-2 md:mr-4
     }
+
+    .btn-square {
+        @apply bg-white border-gray-300 border-l-transparent hover:bg-white hover:border-gray-300 hover:border-l-transparent
+    }
+
+    .input {
+        @apply focus:outline-0 border-r-transparent hover:border-r-transparent w-full
+    }
+
+    .task {
+        @apply flex items-center justify-between px-4 w-full h-14 mt-4 mx-auto bg-white border-b-gray-400 rounded-xl shadow-lg cursor-pointer
+    }
 }
