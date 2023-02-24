@@ -25,4 +25,16 @@
     .task {
         @apply flex items-center justify-between px-4 w-full h-14 mt-4 mx-auto bg-white border-b-gray-400 rounded-xl shadow-lg cursor-pointer
     }
+
+    .card {
+        @apply flex-row rounded-none
+    }
+
+    .divider {
+        @apply after:bg-gray-100 before:bg-gray-100 m-0
+    }
+
+    .select {
+        @apply bg-gray-100 border-gray-100 hover:bg-gray-200
+    }
 }

@@ -1,5 +1,4 @@
 import IconRightArrow from "../assets/IconRightArrow.svg";
-import IconEdit from "../assets/IconEdit.svg";
 import IconDelete from "../assets/IconDelete.svg";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -34,7 +33,7 @@ const CardNote = ({ note }) => {
         <p className="h-[70px] text-gray-700 truncate whitespace-pre-line indent-1">
           {note.description}
         </p>
-        <button>
+        <button onClick={() => navigate(`/notes/${note.id}`)}>
           <img
             src={IconRightArrow}
             alt="right arrow icon"
@@ -43,10 +42,6 @@ const CardNote = ({ note }) => {
         </button>
       </div>
       <div className="flex flex-wrap justify-end">
-        <button onClick={() => navigate(`/notes/edit/${note.id}`)}>
-          <img src={IconEdit} alt="add icon" className="h-8 w-8 ml-2" />
-        </button>
-
         <button onClick={() => delNoteMutation.mutate(note.id)}>
           <img src={IconDelete} alt="add icon" className="h-8 w-8" />
         </button>
