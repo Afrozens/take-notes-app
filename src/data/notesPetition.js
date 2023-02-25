@@ -7,7 +7,7 @@ export const getNotes = async () => {
 };
 
 export const getNote = async (id) => {
-  const res = await fetch(`http://localhost:3000/notes/${id}`);
+  const res = await fetch(`${url}/notes/${id}`);
   const data = await res.json();
   return data
 };
