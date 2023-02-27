@@ -3,6 +3,8 @@ import IconDelete from "../assets/IconDelete.svg";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteNote } from "../data/notesPetition";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime"
 
 const CardNote = ({ note }) => {
   const navigate = useNavigate();
@@ -13,10 +15,12 @@ const CardNote = ({ note }) => {
       queryClient.invalidateQueries("notes");
     },
   });
-
+  dayjs.extend(relativeTime)
+  const createdDate = new Date(note.createdAt)
+  const commentTime = dayjs(createdDate).fromNow()
   return (
     <div className="h-64 max-w-sm bg-white rounded-lg p-6 mb-8 shadow-md">
-      <h4 className="text-gray-400 mb-6 text-md">Junio</h4>
+      <h4 className="text-gray-400 mb-6 text-md">{commentTime}</h4>
       <div className="flex">
         <span
           className={`badge badge-xs indicator-item mr-4 ${

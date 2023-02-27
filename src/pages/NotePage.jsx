@@ -19,7 +19,6 @@ const NotePage = () => {
     queryFn: () => getNote(params.noteId),
     cacheTime: 0,
   });
-
   const editNoteMutation = useMutation({
     mutationFn: editNote,
     onSuccess: () => {
@@ -45,6 +44,8 @@ const NotePage = () => {
 
     return navigate("/");
   };
+  console.log(note)
+  const createdDate = new Date(note?.createdAt)
 
   return (
     <>
@@ -77,7 +78,7 @@ const NotePage = () => {
               </div>
               <div className="divider divider-horizontal"></div>
               <div className="grid h-8 card hover:bg-gray-200 rounded-box place-items-center font-normal overflow-x-auto  sm:shrink sm:flex-grow pr-2">
-                December 4, 2022
+                {note && createdDate.toDateString()}
               </div>
             </li>
             <li className="flex w-full">

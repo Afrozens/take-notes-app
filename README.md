@@ -27,13 +27,13 @@ The API is fake so you will only be able to get the data provided by the api in 
 ```
 git clone https://github.com/Afrozens/take-notes-app.git 
 ```
-- 3) Install dependency
+- 2) Install dependency
 ```
 npm install
 ```
-- 4) Raising the fake backend of the api
+- 3) Raising the fake backend of the api
 ```
-npm run fake-api
+node server.cjs
 ```
 - 5) Open another tab in the terminal...Raising the development server
 ```
@@ -50,13 +50,13 @@ npm run dev
 [Takes Note App]()
 ## Screenshot:
 #### Desktop:
-![main home notes](https://i.imgur.com/BFFpy36.png)
+![main home notes](https://i.imgur.com/H87PRCg.png)
 ![main create note](https://i.imgur.com/1jPRGi5.png)
-![main edit and read note](https://i.imgur.com/U4zPJDj.png)
+![main edit and read note](https://i.imgur.com/D8XgAqd.png)
 #### Mobile:
-![main home notes](https://i.imgur.com/ef92dsC.png)
+![main home notes](https://i.imgur.com/Uv7mJP4.png)
 ![main create note](https://i.imgur.com/65qPMkZ.png)
-![main edit and read note](https://i.imgur.com/jhPmtSS.png)
+![main edit and read note](https://i.imgur.com/8W81TEz.png)
 
 ---
 #### Inspiration in the UI: 
