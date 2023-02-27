@@ -90,7 +90,7 @@ const NotePage = () => {
                 <select
                   className="select select-bordered select-sm w-full max-w-xs"
                   name="category"
-                  defaultValue={note?.category}
+                  value={note?.category}
                 >
                   <option disabled selected>
                     Category

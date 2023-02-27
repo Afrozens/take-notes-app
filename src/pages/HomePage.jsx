@@ -7,7 +7,7 @@ import { useContext } from "react";
 import CategoryFiltersContext from "../contexts/CategoryFiltersContext";
 
 const HomePage = () => {
-  const { category, selectFilter } = useContext(CategoryFiltersContext);
+  const { selectFilter } = useContext(CategoryFiltersContext);
   const {
     isLoading,
     data: notes,

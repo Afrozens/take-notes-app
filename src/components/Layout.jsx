@@ -3,7 +3,7 @@ import IconMenu from "../assets/IconMenu.svg";
 import IconHome from "../assets/IconHome.svg";
 import IconAdd from "../assets/IconAdd.svg";
 import IconTask from "../assets/IconTask.svg";
-import IconNotification from "../assets/IconNotification.svg";
+import Notification from "./Notification";
 
 const Layout = () => {
   return (
@@ -44,12 +44,7 @@ const Layout = () => {
             </h1>
           </div>
           <div className="indicator navbar-end ">
-          <span className="indicator-item badge badge-info">4</span>
-            <img
-              src={IconNotification}
-              alt="notification icon"
-              className="w-8 h-8 cursor-pointer"
-            />
+          <Notification />
           </div>
         </div>
       </header>
