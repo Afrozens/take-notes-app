@@ -1,4 +1,4 @@
-const url = "http://localhost:3000";
+const url = "https://my-json-server.typicode.com/Afrozens/take-notes-app";
 
 export const getTasks = async () => {
   const res = await fetch(`${url}/tasks`);
