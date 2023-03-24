@@ -18,7 +18,6 @@ const HomePage = () => {
     queryFn: getNotes,
     select: (data) => selectFilter(data),
   });
-  console.log(notes);
   if (isLoading) return <div>Loading...</div>;
   else if (isError) return <div>Error {error.message}</div>;
 

@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { editNote, getNote } from "../data/notesPetition";
 import IconTime from "../assets/IconTime.svg";
 import IconDown from "../assets/IconDown.svg";
@@ -8,10 +8,9 @@ import Error from "../components/Error";
 
 const NotePage = () => {
   const [errors, setErrors] = useState([]);
-  
+  const location = useLocation()
   const navigate = useNavigate();
   const params = useParams();
-  
   const queryClient = useQueryClient();
 
   const { data: note, isLoading } = useQuery({
@@ -32,7 +31,6 @@ const NotePage = () => {
 
     const formData = new FormData(e.target);
     const noteUpdate = Object.fromEntries(formData);
-    console.log(noteUpdate);
 
     if (Object.values(noteUpdate).includes("")) {
       return setErrors(["Todos los campos son obligatorios"]);
@@ -44,9 +42,13 @@ const NotePage = () => {
 
     return navigate("/");
   };
-  console.log(note)
   const createdDate = new Date(note?.createdAt)
 
+  useEffect(() => {
+    if (!location.pathname === `/notes/${params.noteId}`) {
+      handleSubmit()
+    }
+  }, [location])
   return (
     <>
       <div className="text-sm breadcrumbs mb-12 sm:text-base ">
