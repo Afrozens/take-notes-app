@@ -47,7 +47,7 @@ npm run dev
 - Implement more Notion style functionalities (**NO-CHECKED**)
 ---
 ## Deploy app: 
-[Takes Note App]()
+[Takes Note App](https://take-notes-app-omega.vercel.app/)
 ## Screenshot:
 #### Desktop:
 ![main home notes](https://i.imgur.com/H87PRCg.png)
